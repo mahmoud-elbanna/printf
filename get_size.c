@@ -18,7 +18,7 @@ int get_size(const char *format, int *i)
 	if (siize == 0)
 		*i = cuurr_i - 1;
 	else
-		*i = cyurr_i;
+		*i = cuurr_i;
 
 	return (siize);
 }

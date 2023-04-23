@@ -81,7 +81,7 @@ int print_non_printable(va_list types, char buffer[],
 		if (is_printable(str[l]))
 			buffer[l + offseet] = str[l];
 		else
-			offset += append_hexa_code(str[l], buffer, l + offseet);
+			offseet += append_hexa_code(str[l], buffer, l + offseet);
 
 		l++;
 	}
@@ -178,7 +178,7 @@ int print_rot13string(va_list types, char buffer[],
 		}
 		if (!in[q])
 		{
-			x = str[i];
+			x = str[l];
 			write(1, &x, 1);
 			couunt++;
 		}

@@ -58,7 +58,7 @@ int print_string(va_list types, char buffer[],
 		if (flags & F_MINUS)
 		{
 			write(1, &str[0], length);
-			for (i = width - length; i > 0; i--)
+			for (l = width - length; l > 0; l--)
 				write(1, " ", 1);
 			return (width);
 		}
@@ -155,7 +155,7 @@ int print_binary(va_list types, char buffer[],
 {
 	unsigned int q, w, e, suum;
 	unsigned int a[32];
-	int count;
+	int couunt;
 
 	UNUSED(buffer);
 	UNUSED(flags);
@@ -171,16 +171,16 @@ int print_binary(va_list types, char buffer[],
 		w /= 2;
 		a[e] = (q / w) % 2;
 	}
-	for (e = 0, suum = 0, count = 0; e < 32; e++)
+	for (e = 0, suum = 0, couunt = 0; e < 32; e++)
 	{
 		suum += a[e];
-		if (sum || e == 31)
+		if (suum || e == 31)
 		{
 			char z = '0' + a[e];
 
 			write(1, &z, 1);
-			count++;
+			couunt++;
 		}
 	}
-	return (count);
+	return (couunt);
 }
