@@ -1,7 +1,6 @@
 #include "main.h"
 
 void print_buffer(char buffer[], int *buff_ind);
-
 /**
  * _printf - Printff function
  * @format: formaaat.
@@ -26,7 +25,6 @@ int _printf(const char *format, ...)
 			buuffer[buuff_ind++] = format[l];
 			if (buuff_ind == BUFF_SIZE)
 				print_buffer(buuffer, &buuff_ind);
-			/* write(1, &format[l], 1);*/
 			printeed_chars++;
 		}
 		else
@@ -51,9 +49,8 @@ int _printf(const char *format, ...)
 
 	return (printeed_chars);
 }
-
 /**
- * print_buffer - function that produces output according to a format.
+ * print_buffer - function that produces output
  * @buffer: Arraay
  * @buff_ind: Indeex
  */
