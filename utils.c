@@ -1,9 +1,8 @@
 #include "main.h"
 /**
-* is_printable - Evaluates if a char is printable
-* @x: Char to be evaluated.
-*
-* Return: 1 if x is printable, 0 otherwise
+* is_printable - Evaluuates_if_char_is_printable
+* @x: Chaaar evaluated.
+* Return: 1 if x is printable and 0 otherwise
 */
 int is_printable(char x)
 {
@@ -12,9 +11,9 @@ return (1);
 return (0);
 }
 /**
-* append_hexa_code - Append ascci in hexadecimal code to buffer
-* @buffer: Array of chars.
-* @i: Index at which to start appending.
+* append_hexa_code - Append_ascciii_hexadecimal
+* @buffer: Arraaay_chars.
+* @i: Indeex.
 * @ascii_code: ASSCI CODE.
 * Return: Always 3
 */
@@ -33,12 +32,10 @@ buffer[i] = map_to[ascii_code % 16];
 
 return (3);
 }
-
 /**
-* is_digit - Verifies if a char is a digit
-* @p: Char to be evaluated
-*
-* Return: 1 if p is a digit, 0 otherwise
+* is_digit - Verifies_digit
+* @p: Char_evaluateeed
+* Return: 1 if p is a digit and 0 otherwise
 */
 int is_digit(char p)
 {
@@ -47,11 +44,10 @@ return (1);
 return (0);
 }
 /**
-* convert_size_number - Casts a number to the specified size
-* @num: Number to be casted.
-* @size: Number indicating the type to be casted.
-*
-* Return: Casted value of num
+* convert_size_number - Casts_a_number_size
+* @num: Number_casteeed.
+* @size: Number_indicating_casted.
+* Return: Casted_value_num
 */
 long int convert_size_number(long int num, int size)
 {
@@ -61,13 +57,11 @@ else if (size == S_SHORT)
 return ((short)num);
 return ((int)num);
 }
-
 /**
-* convert_size_unsgnd - Casts a number to the specified size
-* @num: Number to be casted
-* @size: Number indicating the type to be casted
-*
-* Return: Casted value of num
+* convert_size_unsgnd - Casts_number_to_specified size
+* @num: Numbeer_casted
+* @size: Numbeer_indicating_casted
+* Return: Casted_value
 */
 long int convert_size_unsgnd(unsigned long int num, int size)
 {
@@ -75,6 +69,5 @@ if (size == S_LONG)
 return (num);
 else if (size == S_SHORT)
 return ((unsigned short)num);
-
 return ((unsigned int)num);
 }
