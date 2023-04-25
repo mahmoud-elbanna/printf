@@ -2,11 +2,13 @@
 
 /* write handle */
 /**
-* handle_write_char - Prints a string
+* handle_write_char - Prints a string.
+*
 * @c: char types.
-* @buffer: Buffer array to handle print
+* @buffer: Buffer array to handle print.
 * @flags:  Calculates active flags.
 * @width: get width.
+*
 * @precision: precision specifier
 * @size: Size specifier
 *
@@ -16,6 +18,7 @@ int handle_write_char(char c, char buffer[],
 int flags, int width, int precision, int size)
 
 {
+
 int i = 0;
 char padd = ' ';
 
@@ -47,13 +50,16 @@ return (write(1, &buffer[0], 1));
 
 /* write number */
 /**
-* write_number - Prints a string
-* @is_negative: Lista of arguments
+* write_number - Prints a string.
+* @is_negative: Lista of arguments.
 * @ind: char types.
+*
 * @buffer: Buffer array to handle print
 * @flags:  Calculates active flags
+*
 * @width: get width.
 * @precision: precision specifier
+*
 * @size: Size specifier
 *
 * Return: Number of chars printed.
@@ -135,7 +141,6 @@ if (extra_c)
 buffer[--ind] = extra_c;
 return (write(1, &buffer[ind], length));
 }
-
 /**
 * write_unsgnd - Writes an unsigned number
 * @is_negative: Number indicating if the num is negative
